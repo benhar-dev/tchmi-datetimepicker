@@ -1,0 +1,94 @@
+﻿<div id="Desktop" data-tchmi-type="tchmi-view"
+     data-tchmi-top="0" data-tchmi-left="0"
+     data-tchmi-width-mode="Content"
+     data-tchmi-min-width="100" data-tchmi-min-width-unit="%"
+     data-tchmi-height-mode="Content"
+     data-tchmi-min-height="100" data-tchmi-min-height-unit="%"
+     data-tchmi-background-image="Images/Background.png"
+     data-tchmi-background-image-height="100" data-tchmi-background-image-width="100"
+     data-tchmi-background-image-height-unit="%" data-tchmi-background-image-width-unit="%">
+
+  <div id="ViewDesktopBeckhoffLogo" data-tchmi-type="tchmi-image" 
+       data-tchmi-src="Images/Beckhoff_Logo.svg"
+       data-tchmi-left="10" data-tchmi-top="10" 
+       data-tchmi-width="194" data-tchmi-height="57">
+
+  </div>
+
+<div id="DateTimePicker_UserControl" data-tchmi-type="tchmi-user-control-host" data-tchmi-height="121" data-tchmi-height-unit="px" data-tchmi-left="26" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControl/DateTimePicker.usercontrol" data-tchmi-top="84" data-tchmi-top-unit="px" data-tchmi-width="122" data-tchmi-width-unit="px">
+
+</div>
+
+<div id="TcHmiTextblock_TimeSpan" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="158" data-tchmi-left-unit="px" data-tchmi-text="%ctrl%DateTimePicker_1::TimeSpan%/ctrl%" data-tchmi-top="227" data-tchmi-top-unit="px" data-tchmi-width="208" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_LocalDate" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="158" data-tchmi-left-unit="px" data-tchmi-text="%ctrl%DateTimePicker_1::LocalDateTime%/ctrl%" data-tchmi-top="253" data-tchmi-top-unit="px" data-tchmi-width="208" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_Minute" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="158" data-tchmi-left-unit="px" data-tchmi-text="%ctrl%DateTimePicker_UserControl::Minute%/ctrl%" data-tchmi-top="413" data-tchmi-top-unit="px" data-tchmi-width="60" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_DayOfWeek" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="158" data-tchmi-left-unit="px" data-tchmi-text="%ctrl%DateTimePicker_UserControl::DayOfWeek%/ctrl%" data-tchmi-top="377" data-tchmi-top-unit="px" data-tchmi-width="60" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_Millisecond" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="158" data-tchmi-left-unit="px" data-tchmi-text="%ctrl%DateTimePicker_UserControl::Milliseconds%/ctrl%" data-tchmi-top="465" data-tchmi-top-unit="px" data-tchmi-width="60" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_Day" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="158" data-tchmi-left-unit="px" data-tchmi-text="%ctrl%DateTimePicker_UserControl::Day%/ctrl%" data-tchmi-top="289" data-tchmi-top-unit="px" data-tchmi-width="60" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_Month" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="158" data-tchmi-left-unit="px" data-tchmi-text="%ctrl%DateTimePicker_UserControl::Month%/ctrl%" data-tchmi-top="315" data-tchmi-top-unit="px" data-tchmi-width="60" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_Second" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="158" data-tchmi-left-unit="px" data-tchmi-text="%ctrl%DateTimePicker_UserControl::Second%/ctrl%" data-tchmi-top="439" data-tchmi-top-unit="px" data-tchmi-width="60" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_Year" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="158" data-tchmi-left-unit="px" data-tchmi-text="%ctrl%DateTimePicker_UserControl::Year%/ctrl%" data-tchmi-top="341" data-tchmi-top-unit="px" data-tchmi-width="60" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_TimeSpan_Label" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="26" data-tchmi-left-unit="px" data-tchmi-text="TimeSpan" data-tchmi-top="227" data-tchmi-top-unit="px" data-tchmi-width="122" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_LocalDate_Label" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="26" data-tchmi-left-unit="px" data-tchmi-text="Local Date" data-tchmi-top="253" data-tchmi-top-unit="px" data-tchmi-width="122" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_Day_Label" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="26" data-tchmi-left-unit="px" data-tchmi-text="Day" data-tchmi-top="289" data-tchmi-top-unit="px" data-tchmi-width="122" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_DayOfWeek_Label" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="26" data-tchmi-left-unit="px" data-tchmi-text="Day Of Week" data-tchmi-top="377" data-tchmi-top-unit="px" data-tchmi-width="122" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_Millisecond_Label" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="26" data-tchmi-left-unit="px" data-tchmi-text="Milliseconds" data-tchmi-top="465" data-tchmi-top-unit="px" data-tchmi-width="122" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_Minute_Label" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="26" data-tchmi-left-unit="px" data-tchmi-text="Minute" data-tchmi-top="413" data-tchmi-top-unit="px" data-tchmi-width="122" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_Month_Label" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="26" data-tchmi-left-unit="px" data-tchmi-text="Month" data-tchmi-top="315" data-tchmi-top-unit="px" data-tchmi-width="122" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_Second_Label" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="26" data-tchmi-left-unit="px" data-tchmi-text="Second" data-tchmi-top="439" data-tchmi-top-unit="px" data-tchmi-width="122" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+<div id="TcHmiTextblock_Year_Label" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="26" data-tchmi-left-unit="px" data-tchmi-text="Year" data-tchmi-top="341" data-tchmi-top-unit="px" data-tchmi-width="122" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+</div>
+
+</div>

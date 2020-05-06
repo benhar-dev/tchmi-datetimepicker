@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="MAIN" Id="{4d4fc665-cc1d-4628-b20d-a2c97b9c8da7}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+ fbChangeTime : FB_ChangeSystemTime;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbChangeTime(systemTime:=GVL_Hmi.systemTime);]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="15" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

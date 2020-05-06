@@ -1,0 +1,13 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "UserControl_DateTimePicker": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "tchmi-user-control-host",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControl\\DateTimePicker.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/UserControl_DateTimePicker"
+    }
+  }
+}

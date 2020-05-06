@@ -1,0 +1,79 @@
+<?xml version="1.0" standalone="yes"?>
+<Configuration xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CurrentConfigDataStores.xsd">
+	<Header>
+		<Configurator>TF6420 Database Configurator 3.0</Configurator>
+		<Timestamp>2020-04-28T13:04:08</Timestamp>
+		<FileVersion>2.1</FileVersion>
+		<TargetSystemNetID>169.254.102.247.1.1</TargetSystemNetID>
+	</Header>
+	<GlobalConfig>
+		<GCfg Name="LogMode">1</GCfg>
+		<GCfg Name="LogPath">C:\TwinCAT\Functions\TF6420-Database-Server\Win32\Server</GCfg>
+		<GCfg Name="MaxLogFileSize">10</GCfg>
+		<GCfg Name="Impersonate">0</GCfg>
+		<GCfg Name="DBNULLAllowed">False</GCfg>
+		<GCfg Name="DBConnectionTimeout">15</GCfg>
+		<GCfg Name="DBCommandTimeout">30</GCfg>
+		<GCfg Name="MaxByteArrayLength">256</GCfg>
+		<GCfg Name="MaxStringLength">256</GCfg>
+		<GCfg Name="WSTRINGSupportActive">False</GCfg>
+		<GCfg Name="PwdInfos">tZuYPxhe+G5NKHWLYSZE+NiFAINdlcBgtIUVD+KtAffYMzM0tUkS3VXCiBnDrVXTUPeDH9CgZS8FzghdATMbxQMxoSTq04Vz</GCfg>
+	</GlobalConfig>
+	<BaseConfig>
+		<DataStores>
+			<Databases>
+				<Database Type="2" Name="DB">
+					<DBId>1</DBId>
+					<DBServer>.\SQLEXPRESS</DBServer>
+					<DBProvider>SQLOLEDB</DBProvider>
+					<DBDatabase>BeckhoffTest</DBDatabase>
+					<DBUserId>sa</DBUserId>
+					<DBAuthentication>True</DBAuthentication>
+				</Database>
+			</Databases>
+		</DataStores>
+		<Devices>
+			<AdsDevice DeviceName="ADSDevice1">
+				<DeviceId>1</DeviceId>
+				<NetID>127.0.0.1.1.1</NetID>
+				<Port>851</Port>
+				<ADSReadWriteSetting>1</ADSReadWriteSetting>
+			</AdsDevice>
+		</Devices>
+		<AutoLogGroups>
+			<AutoLogGroup Name="AutoLogGroup">
+				<AutoLogGrpID>1</AutoLogGrpID>
+				<StartUp>AUTOSTART</StartUp>
+				<Direction>DeviceAsSource</Direction>
+				<WriteSettings>
+					<WriteMode>APPEND</WriteMode>
+				</WriteSettings>
+				<SamplingSettings>
+					<SamplingMode>cyclic</SamplingMode>
+					<SamplingRate>500</SamplingRate>
+				</SamplingSettings>
+				<Database>
+					<DBId>1</DBId>
+					<DBTable Name="dbo.MyTable">
+						<ID>1</ID>
+						<TableMode>CUSTOM</TableMode>
+						<FailoverTableName>
+						</FailoverTableName>
+						<Columns>
+							<Column Type="0" Mode="AUTOID" SymbolID="0">Id</Column>
+							<Column Type="8" Mode="TIMESTAMP" SymbolID="0">DateTime</Column>
+							<Column Type="2" Mode="MAPPED" SymbolID="1">MyValue</Column>
+						</Columns>
+					</DBTable>
+				</Database>
+				<Device>
+					<DeviceId>1</DeviceId>
+					<Timeout>2000</Timeout>
+				</Device>
+				<Symbols>
+					<AdsSymbol ID="1" Type="INT" IGroup="16448" IOffset="385000" BitSize="16" AllocationName="myInt">MAIN.myInt</AdsSymbol>
+				</Symbols>
+			</AutoLogGroup>
+		</AutoLogGroups>
+	</BaseConfig>
+</Configuration>

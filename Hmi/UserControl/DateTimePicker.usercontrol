@@ -1,0 +1,148 @@
+﻿<div id="DateTimePicker" data-tchmi-type="tchmi-user-control"
+     data-tchmi-top="0" data-tchmi-left="0"
+     data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%"
+     data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
+
+    <div id="TcDateTimePickerCssHost" data-tchmi-type="tchmi-html-host" data-tchmi-height="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="0" data-tchmi-width-unit="px">
+
+        <style>
+
+            .tchmi-class-UserControlDateTimePicker .tchmi-trend-line-chart-template-chart {
+                visibility: collapse;
+                width: 60px !important;
+                height: 60px !important;
+                position: absolute;
+                top: 0 !important;
+                margin: 0 !important;
+            }
+
+            .tchmi-class-UserControlDateTimePicker .tchmi-trend-line-chart-template-menu-bar > label {
+                color: #4794da;
+                visibility: collapse;
+                width: 0;
+                height: 0;
+                margin-right: 0;
+            }
+
+            .tchmi-class-UserControlDateTimePicker .tchmi-combobox-template {
+                visibility: collapse;
+                width: 0;
+                height: 0;
+            }
+
+            .tchmi-class-UserControlDateTimePicker .tchmi-trend-line-chart-template-menu-bar > .tchmi-combobox {
+                visibility: collapse;
+                width: 0;
+                min-width: 0;
+                height: 0;
+                top: 0;
+            }
+
+            .tchmi-class-UserControlDateTimePicker .tchmi-trend-line-chart-template-menu-bar > .tchmi-trend-line-chart-template-timespan-button-start {
+                visibility: collapse;
+                width: 0;
+                height: 0;
+            }
+
+            .tchmi-class-UserControlDateTimePicker .tchmi-trend-line-chart-template-menu-bar > .tchmi-trend-line-chart-template-timespan-button-end {
+                visibility: collapse;
+                width: 0;
+                height: 0;
+            }
+
+            .tchmi-class-UserControlDateTimePicker .tchmi-trend-line-chart-template-menu-bar > .tchmi-trend-line-chart-template-datetime-button-end {
+                visibility: collapse;
+                width: 0;
+                height: 0;
+            }
+
+            .tchmi-class-UserControlDateTimePicker .tchmi-trend-line-chart-template-menu-bar > .tchmi-trend-line-chart-template-datetime-button-start {
+                height: 100% !important;
+                width: 100% !important;
+                min-width: 60px !important;
+                min-height: 60px !important;
+            }
+
+            .tchmi-class-UserControlDateTimePicker .tchmi-trend-line-chart-template-menu-bar > .tchmi-button {
+                height: 0;
+                width: 0;
+                min-width: 0;
+                min-height: 0;
+                margin-right: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .tchmi-class-UserControlDateTimePicker .tchmi-trend-line-chart-template-menu-bar {
+                width: 100% !important;
+                margin: 0 !important;
+                margin-top: 0 !important;
+                height: 100% !important;
+                padding-left: 0 !important;
+            }
+        </style>
+    </div>
+
+    <div id="TcDateTimePickerTrend" data-tchmi-type="tchmi-trend-line-chart" data-tchmi-end="Latest" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-x-axis-name="x Axis 1" data-tchmi-x-sub-tick-steps="4" data-tchmi-y-sub-tick-steps="4" data-tchmi-show-menu-bar="True" data-tchmi-start="%pp%TimeSpan|BindingMode=TwoWay|SubscriptionMode=Poll%/pp%">
+        <script data-tchmi-target-attribute="data-tchmi-y-axis" type="application/json">
+            [
+            {
+            "id": 1,
+            "position": "Left",
+            "labelFontColor": {
+            "color": "#4794da"
+            },
+            "showLabels": true,
+            "axisColor": {
+            "color": "#4794da"
+            },
+            "mainTickMinValue": 0,
+            "mainTickMaxValue": 100,
+            "showAxisName": true,
+            "axisName": "y Axis 1",
+            "axisNameFontFamily": null,
+            "axisNameFontSize": 15,
+            "axisNameFontSizeUnit": "px",
+            "axisNameFontWeight": "Bold",
+            "axisNameFontColor": {
+            "color": "#4794da"
+            },
+            "decimalPlaces": 2,
+            "autoScaling": false
+            }
+            ]
+        </script>
+
+    
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "UserControlDateTimePicker"
+]
+</script>
+</div>
+
+
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%pp%TimeSpan%/pp%",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "var selectedTimeSpan = TcHmi.Symbol.readEx('%pp%TimeSpan%/pp%');\nvar date = new Date(selectedTimeSpan);\nvar localFormattedDate = TcHmi.Localization.formatDate(date);\n\nTcHmi.Symbol.writeEx('%pp%LocalDateTime%/pp%',localFormattedDate);\nTcHmi.Symbol.writeEx('%pp%Year%/pp%',date.getFullYear());\nTcHmi.Symbol.writeEx('%pp%Month%/pp%',date.getMonth() + 1);\nTcHmi.Symbol.writeEx('%pp%DayOfWeek%/pp%',date.getDay());\nTcHmi.Symbol.writeEx('%pp%Day%/pp%',date.getDate());\nTcHmi.Symbol.writeEx('%pp%Hour%/pp%',date.getHours());\nTcHmi.Symbol.writeEx('%pp%Minute%/pp%',date.getMinutes());\nTcHmi.Symbol.writeEx('%pp%Second%/pp%',date.getSeconds());\nTcHmi.Symbol.writeEx('%pp%Milliseconds%/pp%',date.getMilliseconds());"
+        ],
+        "injectContextObject": false,
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ]
+  }
+]
+</script>
+</div>

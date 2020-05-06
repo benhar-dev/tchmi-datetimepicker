@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="FB_ChangeSystemTime" Id="{7f0c4d63-5aad-4e43-a095-8b09c7319548}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ChangeSystemTime
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+	Error : BOOL;
+	ErrorId : UDINT;
+END_VAR
+VAR_IN_OUT
+	systemTime : TIMESTRUCT;
+END_VAR
+VAR
+	enableWriteTime : BOOL;
+	fbNtSetLocalTime : NT_SetLocalTime; 
+	busyComplete : F_TRIG;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF systemTime.wYear > 0 AND  systemTime.wMonth > 0 AND systemTime.wDay > 0 THEN 
+	enableWriteTime := TRUE;
+END_IF
+
+fbNtSetLocalTime(START := (enableWriteTime AND NOT fbNtSetLocalTime.BUSY), TIMESTR := systemTime);
+busyComplete(clk:= fbNtSetLocalTime.BUSY);
+
+IF busyComplete.Q THEN
+	enableWriteTime := FALSE;
+	memset(ADR(systemTime),0,SIZEOF(systemTime));
+	Error := fbNtSetLocalTime.ERR;
+	ErrorId := fbNtSetLocalTime.ERRID;
+END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="FB_ChangeSystemTime">
+      <LineId Id="61" Count="12" />
+      <LineId Id="27" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

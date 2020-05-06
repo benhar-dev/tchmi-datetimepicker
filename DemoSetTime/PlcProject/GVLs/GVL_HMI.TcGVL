@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <GVL Name="GVL_HMI" Id="{04c2310a-485f-40b7-8720-29d6d4bf3d23}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	
+	systemTime : TIMESTRUCT;
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
